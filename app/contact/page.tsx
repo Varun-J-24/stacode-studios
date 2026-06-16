@@ -23,10 +23,10 @@ export default function ContactPage() {
               <span className="h-2 w-2 rounded-full bg-primary" />
               Get In Touch
             </div>
-            <h1 className="mt-7 font-heading text-5xl font-extrabold leading-tight text-white md:text-6xl">
+            <h1 className="mt-7 font-heading text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
               Let&apos;s Build Something <span className="gradient-text">Amazing Together.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-white/85">
+            <p className="mt-6 max-w-xl text-base leading-8 text-white/85 md:text-lg">
               Have a project in mind or a question?
               <br />
               We&apos;d love to hear from you.
@@ -34,7 +34,7 @@ export default function ContactPage() {
             <div className="mt-9 grid gap-5 sm:grid-cols-3">
               {contactHighlights.map((item) => (
                 <div key={item.title} className="flex items-start gap-3">
-                  <item.icon className="h-9 w-9 rounded-xl border border-secondary/45 bg-secondary/10 p-2 text-primary" />
+                  <item.icon className="h-9 w-9 shrink-0 rounded-xl border border-secondary/45 bg-secondary/10 p-2 text-primary" />
                   <div>
                     <h3 className="text-sm font-bold text-white">{item.title}</h3>
                     <p className="mt-1 text-xs leading-5 text-muted">{item.text}</p>
@@ -43,7 +43,7 @@ export default function ContactPage() {
               ))}
             </div>
           </Reveal>
-          <Reveal delay={0.15}>
+          <Reveal delay={0.15} className="hidden lg:block">
             <ContactHeroVisual />
           </Reveal>
         </div>
@@ -101,16 +101,16 @@ export default function ContactPage() {
             <h2 className="font-heading text-2xl font-bold text-white">Our Process</h2>
             <p className="mt-2 text-muted">A simple and transparent process from idea to launch.</p>
           </div>
-          <div className="mt-10 grid gap-8 md:grid-cols-5">
+          <div className="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
             {processSteps.map((step, index) => (
               <div key={step.title} className="relative text-center">
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-secondary/50 bg-secondary/10">
-                  <step.icon className="h-9 w-9 text-secondary" />
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-secondary/50 bg-secondary/10 md:h-20 md:w-20">
+                  <step.icon className="h-7 w-7 text-secondary md:h-9 md:w-9" />
                 </div>
-                <span className="absolute left-1/2 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-brand-gradient text-xs font-bold text-white">
+                <span className="absolute left-1/2 top-0 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-brand-gradient text-xs font-bold text-white md:h-7 md:w-7">
                   {index + 1}
                 </span>
-                <h3 className="mt-5 font-heading font-semibold text-white">{step.title}</h3>
+                <h3 className="mt-4 font-heading text-sm font-semibold text-white md:mt-5">{step.title}</h3>
                 <p className="mt-2 text-xs leading-6 text-muted">{step.text}</p>
               </div>
             ))}
@@ -125,8 +125,8 @@ export default function ContactPage() {
               <Phone className="h-10 w-10 text-white" />
             </div>
             <div>
-              <h2 className="font-heading text-3xl font-bold text-white">Need a Quick Response?</h2>
-              <p className="mt-2 text-muted">Chat with us on WhatsApp and get instant answers to your questions.</p>
+              <h2 className="font-heading text-xl font-bold text-white sm:text-2xl md:text-3xl">Need a Quick Response?</h2>
+              <p className="mt-2 text-sm text-muted md:text-base">Chat with us on WhatsApp and get instant answers to your questions.</p>
             </div>
           </div>
           <div className="text-center">
