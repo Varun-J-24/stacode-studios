@@ -103,12 +103,12 @@ export default async function HomePage() {
                 <span className="rounded-md border border-secondary/60 bg-secondary/20 px-3 py-1 text-xs font-bold uppercase text-white">
                   Launch Offer - Limited Time
                 </span>
-                <h2 className="mt-5 font-heading text-3xl font-bold leading-tight text-white md:text-4xl">
+                <h2 className="mt-5 font-heading text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl">
                   First 5 Clients Get Business Package at
                 </h2>
-                <p className="mt-4 font-heading text-5xl font-extrabold">
-                  <span className="mr-4 text-3xl text-white/70 line-through">₹14,999</span>
-                  <span className="gradient-text">₹9,999</span>
+                <p className="mt-4 flex flex-wrap items-baseline gap-3 font-heading font-extrabold">
+                  <span className="text-2xl text-white/70 line-through sm:text-3xl">₹14,999</span>
+                  <span className="gradient-text text-4xl sm:text-5xl">₹9,999</span>
                 </p>
               </div>
               <div className="grid gap-4 text-sm text-white">
